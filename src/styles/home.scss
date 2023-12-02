@@ -1,0 +1,160 @@
+@import "colors";
+
+.home {
+  width: 100%;
+  height: 100vh;
+  background-color: $second;
+  border: 0 0 200px 200px;
+
+  > main {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+    justify-content: center;
+
+    > h1 {
+      text-transform: uppercase;
+      font: 400 6rem $text1;
+      color: $first;
+    }
+    > p {
+      color: $first;
+      font: 400 1.2rem $text1;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: no-repeat center/auto url("../assets/1.png");
+    filter: blur(2px);
+  }
+}
+.home2 {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  background-color: $second;
+  padding: 500px 0;
+  align-items: center;
+  justify-content: center;
+
+  > img {
+    width: 30%;
+    animation: imageUp 0.7s linear infinite alternate;
+  }
+  > div {
+    width: 50%;
+    height: 100vh;
+    padding: 5rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > p {
+      color: $first;
+      letter-spacing: 2px;
+      word-spacing: 5px;
+      font: 100 1.2rem $text2;
+    }
+  }
+}
+@keyframes imageUp {
+  to {
+    transform: translateY(-10px);
+  }
+}
+.home3 {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: $second;
+
+  > .containerHome3 {
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100vh;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 200px 200px 0;
+    background-color: $first;
+    margin-top: -200px;
+
+    > h1 {
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+      font: 100 2rem $text1;
+      letter-spacing: 2px;
+      line-height: 170%;
+      border-bottom: 2px solid $dark;
+    }
+    > p {
+      font: italic 100 1rem $text2;
+    }
+  }
+}
+.home4 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  background-color: $second;
+
+  > div {
+    background-color: $third;
+    width: 70%;
+    height: 70vh;
+    padding: 2rem;
+    display: flex;
+    border-radius: 200px 0 0 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > h1 {
+      color: $first;
+      width: 140px;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+      border-bottom: 2px solid $first;
+      padding: 0.5rem;
+    }
+    > article {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+      justify-content: center;
+
+      :hover{
+        filter: invert(1);
+    }
+
+      > div {
+        animation: imageUp 0.7s linear infinite alternate;
+        height: 10rem;
+        width: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $first;
+        padding: 2rem;
+        border-radius: 50%;
+        margin: 1rem;
+        
+        
+        
+      }
+      svg{
+        font-size: 4rem;
+      }
+    }
+  }
+}
